@@ -1,0 +1,49 @@
+<!--pages/citySelect/citySelect.wxml-->
+
+<!-- 选择省市区 -->
+<view class='tencent-city'>
+  <view class='the-thead'>
+    <label class='tkk'>省市区与搜索：</label>
+  </view>
+
+  <picker class='city-picker' mode="multiSelector" bindcolumnchange="bindCitysColumnChange" bindchange='bindCitysChange'
+       range="{{cityArry}}"  value="{{cityIndex}}" >
+      <view class="mod">
+        <label class='tk t-sheng'>{{cityArry[0][cityIndex[0]]}}</label>
+        <label class='tk t-shi'>{{cityArry[1][cityIndex[1]]}}</label>
+        <label class='tk t-qu'>{{cityArry[2][cityIndex[2]]}}</label>
+      </view>
+  </picker>
+
+  <!-- 具体地址 -->
+  <view class='specific-position'>
+    <view class='sp-inp'>
+      <input class='input' placeholder='请输入具体地址（选填）'  value='{{keyword}}' name='keyword'
+       bindinput="bindSearchInput" bindconfirm='searchNearby' bindfocus='bindSearchfocus' bindblur='bindSearchblur' />
+    </view>
+
+    <!-- 通过关键字检索出来的地址 -->
+    <view class="ser-list {{isShowSearchTipsList?'show':'hide'}}">
+        <block wx:for="{{searchTipsList}}" wx:for-item="v" wx:key="k">
+          <view class='li' data-lat='{{v.location.lat}}' data-lng="{{v.location.lng}}" data-title="{{v.title}}" data-title="{{v.title}}" bindtap='chooseSerListItem'>{{v.title}}</view>
+        </block>
+    </view>
+  </view>
+
+</view>
+
+
+<!-- 我的位置 -->
+<view class='tencent-local'>
+  <view class='the-thead'>
+    <label class='tkk'>我的位置：</label>
+  </view>
+  <view class='text'>
+    <input class='input' placeholder='点击下方按钮获取我现在的具体位置' value='{{myLocalAddress}}'></input>
+  </view>
+  <view class='ten-bot'>
+    <button class='btn' bindtap='getMyMapLocation'>获取位置</button>
+  </view>
+</view>
+
+

@@ -1,0 +1,29 @@
+/* pages/citySelect/citySelect.wxss */
+.tencent-city{ width: 100%; height: auto; padding: 0 20rpx; box-sizing: border-box;}
+.city-picker{ width: 100%;  height: 80rpx;  border-bottom: 1px solid #f0f0f0; }
+.city-picker .mod{ width: 100%; height: 100%; line-height: 80rpx; overflow: hidden;
+text-overflow:ellipsis; white-space: nowrap; }
+.city-picker .mod .tk{ font-size: 28rpx;}
+
+.specific-position{ width: 100%; height: 80rpx; line-height: 80rpx; border-bottom: 1px solid #f0f0f0; position: relative;}
+.specific-position .sp-inp{ height: 100%;}
+.specific-position .sp-inp .input{ height: 80rpx; line-height: 80rpx; font-size: 24rpx; }
+.ser-list{ width:100%; height: auto; background-color: #f0f0f0;  box-sizing: border-box; 
+  position: absolute; left:0; top:80rpx; z-index: 2; }
+.ser-list.show{ display: block;}
+.ser-list.hide{ display: none;}  
+.ser-list .li{ padding: 0 20rpx; height: 60rpx; line-height: 60rpx; font-size: 24rpx; color: #666;}
+.ser-classify{ width: 100%; height: 80rpx; line-height: 70rpx; background-color: #fff; display: flex;}
+.ser-classify .lab{ flex: 1; text-align: center; display: inline-block; color: #333; font-size: 24rpx;}
+
+.the-thead{ width: 100%; height: 80rpx;}
+.the-thead .tkk{ height: 60rpx; line-height: 60rpx; font-weight: 700;color: #f00; font-size: 32rpx; display: inline-block;}
+
+
+.tencent-local{ width: 100%; margin-top: 40rpx; padding: 0 20rpx; box-sizing: border-box;}
+.tencent-local .the-thead .tkk{ color: #00f; }
+.tencent-local .text{ width: 100%; height: 80rpx; border: 1px solid #f0f0f0; box-sizing: border-box;}
+.tencent-local .text .input{ width: 100%; height: 100%; padding: 0 10rpx; box-sizing: border-box; font-size: 24rpx;}
+.tencent-local .ten-bot{ width: 100%; height: 80rpx; margin-top: 20rpx;}
+.tencent-local .ten-bot .btn{ width: 25%; line-height: 64rpx; float: right;  background-color: rgb(44, 160, 255);
+ font-size: 28rpx; color: #fff;}
